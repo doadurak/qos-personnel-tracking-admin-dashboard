@@ -1,0 +1,167 @@
+.dt-section {
+  padding: 96px 24px 72px;
+  background: #f1f5f9;
+}
+
+.dt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+.dt-header {
+  max-width: 720px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.dt-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e3a8a;
+  background: #ffffff;
+  border: 1px solid #c7ddff;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.dt-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.dt-header p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* CARD */
+.dt-card {
+  width: 100%;
+  max-width: 980px;
+  background: white;
+  border-radius: 20px;
+  padding: 28px; /* 32 → 28 */
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+/* CANVAS */
+.dt-canvas {
+  position: relative;
+  background: linear-gradient(145deg, #f0f6ff, #ffffff);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.dt-canvas svg {
+  width: 100%;
+  max-width: 820px; /* ASIL KÜÇÜLTME */
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* SVG */
+.dt-building {
+  fill: #ffffff;
+  stroke: #1e40af;
+  stroke-width: 3;
+}
+
+.dt-room {
+  fill: #f1f7ff;
+  stroke: #9ec5ff;
+  stroke-width: 2;
+}
+
+.dt-room-label {
+  fill: #1e40af;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ACCESS POINT */
+.dt-ap-core {
+  fill: #1e3a8a;
+}
+
+.dt-ap-wave {
+  fill: none;
+  stroke: #60a5fa;
+  stroke-width: 2;
+  opacity: 0.5;
+}
+
+/* PERSON */
+.dt-person {
+  fill: #60a5fa;
+}
+
+.dt-legend {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 13px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.dt-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.dt-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dt-dot.ap {
+  background: #1e40af;
+}
+
+.dt-dot.person {
+  background: #60a5fa;
+}
+
+.dt-dot.coverage {
+  border: 2px solid #93c5fd;
+}
+
+/* STATS */
+.dt-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.dt-stat {
+  background: #f0f6ff;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.dt-stat strong {
+  display: block;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.dt-stat span {
+  font-size: 12px;
+  color: #475569;
+}

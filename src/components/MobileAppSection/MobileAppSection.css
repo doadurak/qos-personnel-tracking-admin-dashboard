@@ -1,0 +1,98 @@
+    .mobile-section {
+    padding: 96px 24px;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+    color: #e5e7eb;
+    }
+
+    .mobile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    .mobile-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 64px;
+    }
+
+    .mobile-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(56,189,248,0.3);
+    background: rgba(56,189,248,0.08);
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    }
+
+    .mobile-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #f8fafc;
+    }
+
+    .mobile-header p {
+    color: #cbd5f5;
+    line-height: 1.6;
+    }
+
+    /* CONTENT */
+
+    .mobile-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: center;
+    }
+
+    .mobile-text ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    .mobile-text li {
+    font-size: 16px;
+    margin-bottom: 14px;
+    }
+
+    /* VISUAL */
+
+    .mobile-visual {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    }
+
+    .mobile-visual img {
+    width: 160px;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    transition: transform 0.4s ease;
+    }
+
+    .mobile-visual img:nth-child(2) {
+    transform: translateY(-20px);
+    }
+
+    .mobile-visual img:hover {
+    transform: translateY(-28px) scale(1.03);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+    .mobile-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .mobile-visual {
+        margin-top: 32px;
+    }
+    }

@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f8fafc;
+}
+
+.page {
+  color: #0f172a;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: white;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav .cta {
+  background: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 60px;
+  background: linear-gradient(180deg, #e0f2fe, #f8fafc);
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: #2563eb;
+}
+
+.hero-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 60px;
+}
+
+.feature {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.feature h3 {
+  margin-top: 15px;
+}
+
+/* DEEP SECTION */
+.deep {
+  padding: 60px;
+  background: #0f172a;
+  color: white;
+}
+
+/* TRUST */
+.trust {
+  padding: 40px;
+  text-align: center;
+  background: #e0f2fe;
+}
+
+/* FOOTER */
+.footer {
+  background: #020617;
+  color: #cbd5f5;
+  padding: 40px 60px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.7;
+}

@@ -1,0 +1,68 @@
+/* GOOGLE FONT (modern & kurumsal) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 72px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 64px;
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+
+  font-family: 'Inter', sans-serif;
+}
+
+/* SOL YAZI */
+.header-left {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a; /* lacivert */
+  letter-spacing: -0.3px;
+}
+
+/* ORTA MENÜ */
+.header-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.header-menu a:hover {
+  color: #0f172a;
+}
+
+/* SAĞ BUTON */
+.login-btn {
+  background: #0f172a;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 24px;
+
+  padding: 10px 26px;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}

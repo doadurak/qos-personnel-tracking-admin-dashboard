@@ -1,0 +1,167 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+
+  padding: 120px 80px 100px;
+  background: linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #eef5ff 100%
+  );
+}
+
+/* SOL */
+.hero-left h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+}
+
+.hero-left h1 span {
+  color: #2563eb;
+}
+
+.hero-subtitle {
+  margin-top: 24px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 620px;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #c7d2fe;
+  color: #2563eb;
+  padding: 14px 28px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SAĞ */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+.info-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.card-stats div {
+  text-align: center;
+}
+
+.card-stats strong {
+  display: block;
+  font-size: 22px;
+  color: #2563eb;
+}
+
+.card-stats span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.hero-image-wrapper {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 24px;
+
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation:
+    fadeScaleIn 0.9s ease-out forwards,
+    float 6s ease-in-out infinite;
+
+  transition: transform 0.4s ease;
+}
+.hero-image-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 18px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
