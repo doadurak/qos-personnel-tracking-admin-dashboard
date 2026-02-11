@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# QoS-Based Digital Twin – Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the **Admin Dashboard module** of the proposed QoS-Based Digital Twin system developed within the scope of a thesis project.
 
-## Available Scripts
+The dashboard is designed to centralize, visualize, and monitor real-time data collected from Wi-Fi networks, Digital Twin models, and AutoML-based prediction mechanisms.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Admin Dashboard provides an integrated interface for monitoring:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Wi-Fi Quality of Service (QoS) metrics  
+- Personnel performance indicators  
+- Energy consumption of access points  
+- Real-time system state and decision support insights  
 
-### `npm test`
+The goal is to support network optimization, energy efficiency, and data-driven personnel resource management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Core Functional Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Wi-Fi QoS Monitoring
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The dashboard visualizes key network performance metrics including:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Latency  
+- RTT (Round Trip Time)  
+- Packet Loss  
 
-### `npm run eject`
+These metrics are presented using time-series graphs and dynamic charts to enable early detection of network performance degradation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Personnel Performance & Efficiency Indicators
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The system calculates and visualizes:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Performance Score (Sp)  
+- Efficiency Ratio (η_eff)  
 
-## Learn More
+These indicators are correlated with personnel mobility and network usage behavior.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Energy Consumption & Access Point Status
 
-### Code Splitting
+Through the Digital Twin model, the dashboard monitors:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Active / Passive state of Wi-Fi access points  
+- Energy consumption levels  
 
-### Analyzing the Bundle Size
+This enables data-driven decisions for reducing unnecessary energy usage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### Real-Time Monitoring & Decision Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The dashboard processes live data streams and provides:
 
-### Advanced Configuration
+- Instant system visibility  
+- Dynamic visualization outputs  
+- Support for network reconfiguration decisions  
+- Strategic workforce planning insights  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The dashboard operates in synchronization with:
 
-### `npm run build` fails to minify
+- Backend data collection modules  
+- Network measurement components  
+- AutoML-based prediction models  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Data is transferred via API-based communication and rendered dynamically in the frontend interface.
+
+---
+
+## Purpose of This Repository
+
+This repository focuses specifically on the **Admin Dashboard implementation**.  
+The full thesis project includes additional backend, AutoML, and Digital Twin components.
+
+---
+
+## Technologies Used
+
+- React (Frontend)
+- API-based data integration
+- Data visualization libraries
+- Real-time monitoring logic
+
+---
+
+## Academic Context
+
+This project is part of a research study proposing an intelligent personnel tracking and network optimization system using:
+
+- Digital Twin technology  
+- AutoML-based performance prediction  
+- Wi-Fi QoS-aware system modeling  
+
+---
+
+## License
+
+This project is developed for academic and research purposes.
