@@ -6,25 +6,25 @@ export default function DigitalTwinVisualization() {
     <section className="dt-section">
       <div className="dt-container">
 
-        {/* HEADER */}
+        {/* BAŞLIK (HEADER) */}
         <div className="dt-header">
-          <span className="dt-badge">Digital Twin</span>
-          <h2>Real-Time Building Visualization</h2>
+          <span className="dt-badge">Dijital İkiz</span>
+          <h2>Gerçek Zamanlı Bina Görselleştirme</h2>
           <p>
-            Interactive digital twin of a smart factory with live personnel
-            tracking and Wi-Fi QoS monitoring.
+            Canlı personel takibi ve Wi-Fi QoS izleme özellikli, 
+            akıllı bir fabrikanın etkileşimli dijital ikizi.
           </p>
         </div>
 
-        {/* CARD */}
+        {/* KART (CARD) */}
         <div className="dt-card">
           <div className="dt-canvas">
 
             <svg viewBox="0 0 800 520">
-              {/* BUILDING */}
+              {/* BİNA (BUILDING) */}
               <rect x="40" y="40" width="720" height="440" rx="14" className="dt-building"/>
 
-              {/* ROOMS */}
+              {/* ODALAR (ROOMS) */}
               {rooms.map((room) => (
                 <g key={room.label}>
                   <rect
@@ -46,7 +46,7 @@ export default function DigitalTwinVisualization() {
                 </g>
               ))}
 
-              {/* ACCESS POINTS */}
+              {/* ERİŞİM NOKTALARI (ACCESS POINTS) */}
               {accessPoints.map((ap, i) => (
                 <g key={i}>
                   <circle cx={ap.x} cy={ap.y} r="7" className="dt-ap-core">
@@ -68,7 +68,7 @@ export default function DigitalTwinVisualization() {
                 </g>
               ))}
 
-              {/* PERSONNEL */}
+              {/* PERSONEL (PERSONNEL) */}
               {personnel.map((p, i) => (
                 <circle key={i} cx={p.x} cy={p.y} r="5" className="dt-person">
                   <animate
@@ -87,20 +87,20 @@ export default function DigitalTwinVisualization() {
               ))}
             </svg>
 
-            {/* LEGEND */}
+            {/* GÖSTERGE (LEGEND) */}
             <div className="dt-legend">
-              <LegendItem type="ap" label="Wi-Fi Access Point" />
-              <LegendItem type="person" label="Personnel" />
-              <LegendItem type="coverage" label="Coverage Area" />
+              <LegendItem type="ap" label="Wi-Fi Erişim Noktası" />
+              <LegendItem type="person" label="Personel" />
+              <LegendItem type="coverage" label="Kapsama Alanı" />
             </div>
           </div>
 
-          {/* STATS */}
+          {/* İSTATİSTİKLER (STATS) */}
           <div className="dt-stats">
-            <Stat label="Active Personnel" value="47" />
-            <Stat label="Access Points" value="7" />
-            <Stat label="Coverage Rate" value="92%" />
-            <Stat label="Avg Latency" value="8 ms" />
+            <Stat label="Aktif Personel" value="47" />
+            <Stat label="Erişim Noktası" value="7" />
+            <Stat label="Kapsama Oranı" value="%92" />
+            <Stat label="Ort. Gecikme" value="8 ms" />
           </div>
         </div>
 
@@ -109,16 +109,16 @@ export default function DigitalTwinVisualization() {
   );
 }
 
-/* ---------------- DATA ---------------- */
+/* ---------------- VERİ (DATA) ---------------- */
 
 const rooms = [
-  { x: 60, y: 60, w: 200, h: 120, label: "Production Area" },
-  { x: 300, y: 60, w: 200, h: 120, label: "Assembly Line" },
-  { x: 540, y: 60, w: 200, h: 120, label: "Quality Control" },
-  { x: 60, y: 210, w: 280, h: 120, label: "Warehouse" },
-  { x: 380, y: 210, w: 180, h: 120, label: "Office" },
-  { x: 600, y: 210, w: 140, h: 120, label: "Break Room" },
-  { x: 60, y: 360, w: 680, h: 90, label: "Logistics & Shipping" },
+  { x: 60, y: 60, w: 200, h: 120, label: "Üretim Alanı" },
+  { x: 300, y: 60, w: 200, h: 120, label: "Montaj Hattı" },
+  { x: 540, y: 60, w: 200, h: 120, label: "Kalite Kontrol" },
+  { x: 60, y: 210, w: 280, h: 120, label: "Depo" },
+  { x: 380, y: 210, w: 180, h: 120, label: "Ofis" },
+  { x: 600, y: 210, w: 140, h: 120, label: "Dinlenme Odası" },
+  { x: 60, y: 360, w: 680, h: 90, label: "Lojistik ve Sevkiyat" },
 ];
 
 const accessPoints = [
@@ -140,7 +140,7 @@ const personnel = [
   { x: 350, y: 400 },
 ];
 
-/* ---------------- UI PARTS ---------------- */
+/* ---------------- UI PARÇALARI (UI PARTS) ---------------- */
 
 function Stat({ label, value }) {
   return (

@@ -4,6 +4,8 @@ import {
   Search, Bell, TrendingUp, Zap, AlertTriangle, Eye, Calendar,
   MoreVertical, LogOut, ChevronRight
 } from 'lucide-react';
+import api from '../../api/api';
+
 import { 
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
 } from 'recharts';
@@ -31,14 +33,46 @@ const performanceData = [
   { name: 'Paz', Sp: 65, eff: 55 },
 ];
 
+
+
+
 const AdminDashboard = ({ user, onLogout }) => {
   const [activePage, setActivePage] = useState('dashboard');
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [users, setUsers] = useState([]);
+const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+  const fetchUsers = async () => {
+    try {
+      const res = await api.get("/users/all");
+
+      // MOCK METRICS FALLBACK
+      const enrichedUsers = res.data.map((u, i) => ({
+        ...u,
+        metrics: u.metrics || {
+          performanceScore: 70 + i * 3,
+        },
+        status: u.status || "ACTIVE",
+      }));
+
+      setUsers(enrichedUsers);
+    } catch (err) {
+      console.error("User fetch error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchUsers();
+}, []);
+
 
   return (
     <div className="flex h-screen w-full bg-slate-50 overflow-hidden font-sans text-slate-900">
@@ -127,8 +161,19 @@ const AdminDashboard = ({ user, onLogout }) => {
             {activePage === 'dashboard' && (
               <div className="space-y-8 animate-in slide-in-from-bottom-4 duration-500">
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                  <StatCard title="Total Personnel" value="247" sub="+12 this month" icon={<Users className="text-white"/>} />
-                  <StatCard title="Active Twins" value="238" sub="%96.4 Online" icon={<ActivityIcon className="text-white"/>} />
+                  <StatCard
+  title="Total Personnel"
+  value={users.length}
+  sub="Total registered users"
+  icon={<Users />}
+/>
+
+<StatCard
+  title="Active Twins"
+  value={users.filter(u => u.status === 'ACTIVE').length}
+  sub="Currently online"
+  icon={<ActivityIcon />}
+/>
                   <StatCard title="Power Saved" value="42.8 kWh" sub="-8% optimized" icon={<Zap className="text-white"/>} />
                   <StatCard title="QoS Score" value="%94.2" sub="Optimal Reliability" icon={<Wifi className="text-white"/>} />
                 </div>
